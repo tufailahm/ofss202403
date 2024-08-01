@@ -17,4 +17,153 @@ Dbeaver		https://dbeaver.io/download/
 *In Dbeaver , please give the password as root
 
 </pre>
-</h2>		
+</h2>	
+
+
+
+What is Spring ?
+
+Framework
+IOC	- Inversion of control
+DI	- Dependency injection
+
+
+public class Message
+{
+	public String getMessage()
+	{
+		return "Welcome OFSS";
+	}
+}
+
+
+
+
+Message m ;
+m.getMessage();
+
+
+
+
+JSON
+REST
+
+
+
+alstrom-banking-app
+
+Your name : digi-banking-app
+
+
+Two ways :
+
+1) Download jar file and attach it your project
+
+
+
+
+Spring Boot
+=============
+
+Zero configuration
+Embedded tomcat		default	port 8080
+
+
+
+REST
+================================================================
+
+Web Service
+
+
+Amazon(app)	request			JSON response--app (one plus)
+
+
+JSON - 
+{
+
+}
+
+
+
+http:localhost:9090/visitors/message
+					
+
+
+
+Hands on : Create a rest endpoint to return your full name
+
+http://localhost:9090/myintro
+
+Output : Hi I Am Mohammad Tufail Ahmed
+
+
+
+
+http://localhost:9090/todaysmessage
+
+
+
+@Component
+@Bean
+@Qualifier
+@Autowired
+
+
+
+https://codeshare.io/tufail
+
+Hands on : Use the below class RandomNumberGenerator to create the following rest endpoint to return random visitor id
+
+http://localhost:9090/getvisitorid
+
+
+package com.training.utility;
+
+import java.util.Random;
+
+public class RandomNumberGenerator {
+
+	public String generateNumber() {
+		// create instance of Random class
+		Random random = new Random();
+
+		// Generate random integers in range 0 to 999
+		int rand_int1 = random.nextInt(10000);
+
+		return "V00-"+rand_int1+"-2024";
+
+	}
+}
+
+Points to follow :
+We should not use new keyword to create instance of RandomNumberGenerator 
+Use @Autowired annotation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
