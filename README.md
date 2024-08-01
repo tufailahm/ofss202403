@@ -170,9 +170,12 @@ http://localhost:9090/visitor				GET		- GET ALL VISITORS
 http://localhost:9090/visitor/{visitorId}		GET		- GET A SINGLE VISITOR
 http://localhost:9090/visitor				POST		- CREATE A VISITOR 
 http://localhost:9090/visitor				PUT		- UPDATE A VISITOR 
+http://localhost:9090/visitor/{visitorId}/{newMobileNumber} PUT	- 	UPDATE A VISITOR 
 http://localhost:9090/visitor/{visitorId}		DELETE		- DELETE A SINGLE VISITOR
+http://localhost:9090/visitor/mobilenumber/{mobileNumber}		DELETE		- DELETE A SINGLE VISITOR
 http://localhost:9090/visitor/search/{vistorName}	GET		- GET VISITOR(S) NAME
-http://localhost:9090/visitor/search/{purpose}		GET		- GET VISITOR(S) NAME
+http://localhost:9090/visitor/search/purpose/{purpose}	GET		- GET VISITOR(S) NAME
+http://localhost:9090/visitor/mobilenumber/{mobileNumber}	GET		- GET VISITOR BY MOBILE NUMBER
 
 http://localhost:9090/visitor/search/Neha	- POST			- METHOD NOT ALLOWED(405)
 
@@ -199,5 +202,71 @@ http://localhost:9090/customer
 15 minutes
 
 
+10 minutes
+-----------------
+localhost:9090/visitor			- It should print three visitors
+localhost:9090/visitor/191			- It shoud print hello
 
+
+
+
+
+return products.stream().filter(t -> t.getProductId() == (productId)).findFirst().get();
+
+
+products.add(product);
+
+
+for(int i=0;i<products.size();i++){
+Product p = products.get(i);
+if(p.getProductId().equals(productId)){
+products.set(i, product);
+
+products.removeIf(t -> t.getProductId().equals(productId));
+
+
+
+Swagger
+=============
+
+Documentation for REST APIS
+
+pom.xml
+
+<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+
+Save and close pom.xml
+
+http://localhost:9090/swagger-ui/index.html
+
+
+
+
+======================================
+
+Status Codes in Rest
+
+GET/1019
+200	 - OK
+204	- NO_CONTENT
+
+
+Saving	- POST
 	
+201	- CREATED
+409	- CONFLICT
+500	- INTERNAL SERVER
+400	- BAD REQUEST
+
+
+
+
+
+
+
+
