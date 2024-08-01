@@ -103,12 +103,12 @@ Output : Hi I Am Mohammad Tufail Ahmed
 http://localhost:9090/todaysmessage
 
 
-
-@Component
+Sterotype annoation
+@Component	- POJO/MODEL/UTILITY
 @Bean
 @Qualifier
 @Autowired
-
+@Configuration	
 
 
 https://codeshare.io/tufail
@@ -116,7 +116,6 @@ https://codeshare.io/tufail
 Hands on : Use the below class RandomNumberGenerator to create the following rest endpoint to return random visitor id
 
 http://localhost:9090/getvisitorid
-
 
 package com.training.utility;
 
@@ -141,28 +140,63 @@ We should not use new keyword to create instance of RandomNumberGenerator
 Use @Autowired annotation
 
 
+Rest API
+
+CRUD 
 
 
 
+Visitor	- class
+	int visitorId
+	String visitorName
+	String mobileNumber
+	String purpose
 
 
+Way 1 :
+
+http://localhost:9090/createVisitor		Visitor
+http://localhost:9090/deleteVisitor/{1918}
+http://localhost:9090/modifyVisitor		Visitor
+http://localhost:9090/getAllVisitors	
+http://localhost:9090/getVisitorById/{1918}	
 
 
+Way 2:
+
+					HTTP METHODS
+
+http://localhost:9090/visitor				GET		- GET ALL VISITORS
+http://localhost:9090/visitor/{visitorId}		GET		- GET A SINGLE VISITOR
+http://localhost:9090/visitor				POST		- CREATE A VISITOR 
+http://localhost:9090/visitor				PUT		- UPDATE A VISITOR 
+http://localhost:9090/visitor/{visitorId}		DELETE		- DELETE A SINGLE VISITOR
+http://localhost:9090/visitor/search/{vistorName}	GET		- GET VISITOR(S) NAME
+http://localhost:9090/visitor/search/{purpose}		GET		- GET VISITOR(S) NAME
+
+http://localhost:9090/visitor/search/Neha	- POST			- METHOD NOT ALLOWED(405)
 
 
+Hands  on
 
 
+1) Create model class Customer
+
+customerId
+customerName
+mobileNumber
+balance
 
 
+http://localhost:9090/customer
 
 
+2) Please prepare endpoints for below url
+
+http://localhost:9090/customer
 
 
-
-
-
-
-
+15 minutes
 
 
 
