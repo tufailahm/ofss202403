@@ -13,7 +13,7 @@ import com.training.utility.RandomNumberGenerator;
 @RequestMapping("index")
 public class IndexController {
 
-	@GetMapping("guest")		//http://localhost:9090/visitor
+	@GetMapping("guest")		//http://localhost:9090/index/guest
 	public String sayHello() {
 		return "Hello Visitors, welcome in Alstrom Bank";
 	}
@@ -32,6 +32,8 @@ public class IndexController {
 		return message2.getMessage();
 	}
 	
+	
+	//http://localhost:9090/index/ofss	- Welcome OFSS Trainee
 	
 	@Autowired
 	RandomNumberGenerator randomNumberGenerator;

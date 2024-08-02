@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import com.training.utility.Message;
 import com.training.utility.RandomNumberGenerator;
 
-@SpringBootApplication
+@SpringBootApplication		//will discuss
 public class AlstromBankingAppApplication {
 
 	public static void main(String[] args) {

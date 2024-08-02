@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.training.model.Visitor;
 
-@RestController
+@RestController			//- JSON			
+			//	- Views / HTML/JSP
 @RequestMapping("visitor")
 public class VisitorController {
 
