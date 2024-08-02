@@ -1,0 +1,22 @@
+<p id="myDemo"></p>
+
+<script type="text/javascript">
+
+var text = '{ "employeeName":"Neha Kapoor" }';
+
+var obj = JSON.parse(text);
+
+document.getElementById("myDemo").innerHTML = obj.employeeName;
+
+</script>
+
+
+Hands On : 
+{
+   "visitorId":111,
+   "visitorName":"MohmmadTufail",
+   "mobileNumber":"8867205331",
+   "purpose":"Training"
+}
+
+Hands On : Output : MohammadTufail , your mobile number is : 8867205331

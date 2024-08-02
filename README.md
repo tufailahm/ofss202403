@@ -417,3 +417,139 @@ pipeline - create and write logic
 
 Use case : 
 	
+if(gitnotavavle)
+https://github.com/tufailahm/ofss-batch
+else
+https://github.com/tufailahm/ofss-batch-old
+
+
+====================================
+
+
+-Dmaven.test.skip=true
+
+
+=====================================
+
+
+
+
+JSON
+
+Javascript object notation
+
+{
+	"visitorId":101,
+
+}
+
+
+Array
+[
+]
+
+pom.XML
+
+
+
+.json
+
+
+
+
+
+
+WELL FORMED
+
+
+
+{
+    visitorId: 111,
+    "visitorName": "MohmmadTufail",
+    "mobileNumber": "8867205331",
+    "purpose": "Training"
+  }
+
+
+
+==== To do Hands on
+
+<p id="myDemo"></p>
+
+<script type="text/javascript">
+
+var text = '{ "employeeName":"Neha Kapoor" }';
+
+var obj = JSON.parse(text);
+
+document.getElementById("myDemo").innerHTML = obj.employeeName;
+
+</script>
+
+
+Hands On : 
+{
+   "visitorId":111,
+   "visitorName":"MohmmadTufail",
+   "mobileNumber":"8867205331",
+   "purpose":"Training"
+}
+
+Hands On : Output : MohammadTufail , your mobile number is : 8867205331
+
+
+
+
+
+
+VALID JSON
+=============
+Schema - Rules
+
+
+
+
+{
+   "visitorId":111,
+   "visitorName":"MohmmadTufail",
+   "mobileNumber":"8867205331",
+   "purpose":"Training"
+}
+
+
+{
+   "guestId":111,
+   "visitorName":"MohmmadTufail",
+   "mobileNumber":"8867205331",
+   "purpose":"Training"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

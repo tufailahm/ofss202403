@@ -14,7 +14,7 @@ class AlstromBankingAppApplicationTests {
 	
 	@Test				// this test will fail
 	void testAdd() {
-		assertTrue(true);
+		assertTrue(false);
 	}
 
 }
