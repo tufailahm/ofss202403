@@ -35,6 +35,12 @@ public class IndexController {
 	
 	//http://localhost:9090/index/ofss	- Welcome OFSS Trainee
 	
+	@GetMapping("ofss")
+	public String ofss() {
+		return  "Welcome OFSS Trainee";
+	}
+	
+	
 	@Autowired
 	RandomNumberGenerator randomNumberGenerator;
 	

@@ -336,6 +336,84 @@ It is perfectly reasonable to point out that Continuous Deployment might lead to
 
 What is Jenkins ?
 
-10 minutes
+Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration, and continuous delivery
 
 
+What is Jenkins Pipeline?
+Jenkins Pipeline (or simply "Pipeline" with a capital "P") is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins.
+
+
+
+Maven
+=======
+
+dependency management tool
+build 
+
+
+Lifecyle
+
+validate
+compile
+test
+package
+install
+
+
+mvn compile
+
+
+mvn package
+
+
+
+Two things
+==============
+
+C:\Users\tufai\Downloads\apache-maven-3.9.8-bin\apache-maven-3.9.8\bin
+mvn package
+
+
+
+=========================
+
+
+
+Git repo :
+
+https://github.com/tufailahm/ofss-batch
+https://github.com/tufailahm/ofss-batch.git
+
+=============================================
+
+
+Hands on :
+
+Create another jenkins pipeline named weeklyofssjob
+for the below git url to run automatically every Friday 12:00
+
+
+https://github.com/tufailahm/ofss-batch
+
+
+* 12 * * 5
+0 12 * * 5	- correct answer
+
+
+
+==============================================
+
+Creating custom pipeline
+
+
+custompipeline 
+	test cases - 10 test cases
+
+	1 fail
+
+
+pipeline - create and write logic 
+
+
+Use case : 
+	
