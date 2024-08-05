@@ -598,7 +598,7 @@ else
 
 Hands On :
 
-Prompt the user to enter his/her full name. Form initials using the first characters of the first and last name. Popup the initials.
+1) Prompt the user to enter his/her full name. Form initials using the first characters of the first and last name. Popup the initials.
 
 Hint : String prompt(question,defaultanswer)
 If user clicks OK it returns the string entered by the user
