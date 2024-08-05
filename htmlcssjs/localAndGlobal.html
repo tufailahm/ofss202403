@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script>
+        total = 0; //Global variable
+        function sum() {
+            var x = 10; //True Local variable
+            y = 20;
+            total = x + y;
+        }
+        function display() {
+            sum();
+            alert(total);
+            alert(y); 
+            alert(x); // Error
+        } </script>
+</head>
+
+<body>
+    <script>display();</script>
+</body>
+
+</html>

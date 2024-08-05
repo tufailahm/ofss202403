@@ -13,6 +13,4 @@ public class AlstromBankingAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AlstromBankingAppApplication.class, args);
 	}
-	
-
 }

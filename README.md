@@ -529,10 +529,94 @@ Schema - Rules
 
 
 
+file:///E:/Trainings/2024/7.OFSS/ofss202403/htmlcssjs/success.html?qualification=mca
+
+
+Hands on : 
+Please add first name and last name text box in this, alongwith gender radio buttons.
+
+
+10 minutes
+
+
+file:///E:/Trainings/2024/7.OFSS/ofss202403/htmlcssjs/success.html?username=tufail&firstname=MOHAMMAD&lastname=AHMED&qualification=mca&gender=male
 
 
 
 
+CSS
+===========================
+Cascading style sheets
+
+
+
+Internal 
+External 
+Inline
+
+
+
+
+
+
+
+
+
+Javascript
+==============
+
+
+- 	client side validation scripting language
+-	dynamic controls
+
+
+
+
+
+
+
+
+Internal 
+External 
+Inline
+
+
+alert
+prompt
+var result = confirm("Do you want to continue ?");
+if(result)
+{
+	//OK
+}
+else
+{
+	/Cancel
+}
+
+
+Hands On :
+
+Prompt the user to enter his/her full name. Form initials using the first characters of the first and last name. Popup the initials.
+
+Hint : String prompt(question,defaultanswer)
+If user clicks OK it returns the string entered by the user
+If user clicks CANCEL it returns NULL
+(15 mins)
+
+Enter first name : Tufail/Richard
+Enter second name : Ahmed/Nixon
+Do u want to display your name ?
+OK  Welcome Mr. T Ahmed		Welcome Mr. R Nixon
+Cancel  Thanks
+
+
+2)
+Write a java script function to get a random number between 0 and 9?
+
+(10 mins)
+
+
+3) Problem statement : Case Study : Case Study_Alstrom_Banking.docx : Page 6 , Problem statement :2
 
 
 

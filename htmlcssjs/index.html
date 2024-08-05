@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        h2.highlight {
+            color:#cc3a9d;
+            text-align: left;
+        }
+        .important
+        {
+            color: red;
+            text-align: right;
+            background-color: burlywood;
+        }
+        input#username {
+            font-size: xx-small;
+        }
+        input.demo {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <form action="success.html">
+<!--Please add first name and last name text box in this, alongwith gender radio buttons.
+10 minutes -->
+<h2 style="color:darkblue">User Form</h2>
+<h2 style="display: none;">OFSS User Form</h2>      <!-- Make it hidden through CSS-->
+<h2 >Style 1</h2>
+<h2 class="important highlight">Style 2</h2>
+<h1 class="important">Style 3</h2>
+
+        User name : <input type="text" 
+                        id="username" 
+                        name="username" 
+                        class="demo">
+        <br/>
+        <div>First Name: <input type="text" name="firstname" id="firstname"></div>
+        <div>Last Name: <input type="text" name="lastname" id="lastname"></div>
+        <br/>
+        Qualification : <select name="qualification">
+            <option value="mca">Master in Computer Application</option>
+            <option value="mba">Master in Business Administration</option>
+        </select>
+        <br/>
+        Gender: <br />
+      Male: <input type="radio" name="gender" value="male" id="male" /> <br />
+      Female: <input type="radio" name="gender" value="female" id="female" />
+        <br/>
+        <input type="submit" value="Go">
+
+        <input type="reset" value="Clear">
+    </form>
+
+
+    <span id="msg1">Hi</span>
+    <span>Hello</span>
+    <div>Message1</div>
+    <div>Message2</div>
+
+</body>
+</html>
