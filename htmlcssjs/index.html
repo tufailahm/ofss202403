@@ -23,8 +23,17 @@
             font-size: xx-large;
         }
     </style>
+    <script>
+        function display(){
+           document.images[0].src ="c.jpg";
+           document.images[0].height ="200";
+        }
+    </script>
 </head>
 <body>
+    <img src="a.jpg" height="300" width="300" 
+            onmouseenter="display()">
+    <img src="b.jpg" height="300" width="300">
     <form action="success.html">
 <!--Please add first name and last name text box in this, alongwith gender radio buttons.
 10 minutes -->
@@ -34,7 +43,7 @@
 <h2 class="important highlight">Style 2</h2>
 <h1 class="important">Style 3</h2>
 
-        User name : <input type="text" 
+        User name* : <input type="text" 
                         id="username" 
                         name="username" 
                         class="demo">
@@ -43,6 +52,8 @@
         <div>Last Name: <input type="text" name="lastname" id="lastname"></div>
         <br/>
         Qualification : <select name="qualification">
+            <option value="-1">-----select------</option>
+
             <option value="mca">Master in Computer Application</option>
             <option value="mba">Master in Business Administration</option>
         </select>

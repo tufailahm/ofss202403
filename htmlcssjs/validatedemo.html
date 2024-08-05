@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function validate() {
+            var uname = document.getElementById("username");
+            var fname = document.getElementById("firstname");
+            var lname = document.getElementById("lastname");
+
+            if (uname.value.length == 0) {
+                alert("Please enter username to login")
+                uname.focus();
+            }
+            else if (fname.value.length == 0) {
+                alert("Please enter firstname to login")
+                fname.focus();
+            }
+            else if (lname.value.length == 0) {
+                alert("Please enter lastname to login")
+                lname.focus();
+            }
+            else {
+                alert("Welcome :" + uname);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Username : <input type="text" id="username"><br />
+        FirstName : <input type="text" id="firstname"><br />
+        LastName : <input type="text" id="lastname"><br />
+
+        <input type="button" value="Login" onclick="validate()">
+
+    </form>
+</body>
+
+</html>

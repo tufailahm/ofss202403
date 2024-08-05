@@ -635,6 +635,38 @@ Write a java script function to get a random number between 0 and 9?
 
 
 
+onclick
+onfocus
+onblur
+
+
+1.
+
+
+
+
+
+
+
+
+Use case : validate form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validate(idx){
+            ele=document.getElementById(idx)
+            if(ele.value.length == 0){
+                alert("Please enter correct "+ele.name)
+            }
+            else{
+                alert(ele.name+" is "+ele.value)
+            }
+        }   
+    </script>
+    <form action="">
+        Username: <input type="text" name="username" id="uname" onblur="validate('uname')"><br><br>
+        Firstname: <input type="text" name="firstname" id="fname" onblur="validate('fname')"><br><br>
+        Lastname: <input type="text" name="lastname" id="lname" onblur="validate('lname')"><br><br>
+    </form>
+</body>
+</html>
