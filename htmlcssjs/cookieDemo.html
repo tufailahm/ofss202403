@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script>
+        function setCookie(value) {
+            var dt = new Date();
+            dt.setDate(dt.getDate() + 1);
+            document.cookie = "ofssusername=" + escape(value) + "; expires=" + dt.toGMTString()+"domain=" + 
+            window.location.hostname
+            alert("Cookie set successfully for  "+value);
+        }
+        function checkCookie() {
+            username = getCookie('ofssusername');
+            if (username != null && username != "") {
+                document.forms[0].uname.value = username;
+            }
+        }
+
+
+        //Write the function getCookie() the 
+        function getCookie(name) {
+            if (document.cookie.length > 0) {
+                ind = document.cookie.indexOf(name);
+                if (ind != -1) {
+                    ind = ind + name.length + 1;
+                    ind1 = document.cookie.indexOf(";", ind);
+                    if (ind1 == -1) ind1 = document.cookie.length;
+                    return unescape(document.cookie.substring(ind, ind1));
+                }
+            }
+            return "";
+        }
+
+
+
+
+    </script>
+</head>
+
+<body onLoad="checkCookie()">
+    <form>Name:<input type="text" name="uname">
+        <input type="button" value="set" onClick="setCookie(document.forms[0].uname.value)">
+    </form>
+</body>
+
+</html>

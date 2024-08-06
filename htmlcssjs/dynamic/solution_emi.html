@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator</title>
+  </head>
+  <body>
+    <div>
+      Principal:
+      <input
+        type="number"
+        id="principal"
+        onfocus="removeErr('errprincipal')" /><span id="errprincipal"></span>
+    </div>
+
+    <div>
+      Tenure:
+      <input type="number" id="tenure" onfocus="removeErr('errtenure')" /><span
+        id="errtenure"></span>
+    </div>
+
+    <div>
+      Interest:
+      <input
+        type="number"
+        id="interest"
+        onfocus="removeErr('errinterest')" /><span id="errinterest"></span>
+    </div>
+
+    <p id="emiamt"></p>
+
+    <button onclick="calcEMI()">Calculate EMI</button>
+
+    <script>
+      function validate() {
+        var p = document.getElementById("principal");
+        var r = document.getElementById("interest");
+        var t = document.getElementById("tenure");
+        var errP = document.getElementById("errprincipal");
+        var errR = document.getElementById("errinterest");
+        var errT = document.getElementById("errtenure");
+        var errcnt = 0;
+        if (p.value <= 0) {
+          errP.innerHTML = "<font color=red>Please enter principal amount";
+          errcnt++;
+        }
+        if (r.value <= 0) {
+          errR.innerHTML = "<font color=red>Please enter interest";
+          errcnt++;
+        }
+        if (t.value.length == 0) {
+          errT.innerHTML = "<font color=red>Please enter tenure";
+          errcnt++;
+        }
+        if (errcnt > 0) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function removeErr(field) {
+        document.getElementById(field).innerHTML = "";
+      }
+      function calcEMI() {
+        const validationRes = validate();
+        if (!validationRes) {
+        //   alert("Please check the values");
+          return;
+        }
+        let principal = document.getElementById("principal").value;
+        let tenure = document.getElementById("tenure").value;
+        let interest = document.getElementById("interest").value;
+
+        let monthlyPayment = principal / tenure + interest;
+        let totalInterest = (principal * (interest * 0.01)) / tenure;
+        let totalPayment = parseFloat(principal) + parseFloat(totalInterest);
+
+        let emi;
+
+        interest = interest / (12 * 100); // one month interest
+        tenure = tenure * 12; // one month period
+        emi =
+          (principal * interest * Math.pow(1 + interest, tenure)) /
+          (Math.pow(1 + interest, tenure) - 1);
+
+        document.getElementById(
+          "emiamt"
+        ).innerHTML = `<font color="green">Your emi is: ${Math.round(emi)}`;
+      }
+    </script>
+  </body>
+</html>

@@ -9,8 +9,10 @@
 <script>
     function validate() {
         var uname = document.getElementById("username");
+		var err1 = document.getElementById("errusername");
         if (uname.value.length == 0) {
-            alert("Please enter your name to login")
+            err1.innerHTML ="<font color=red>Please enter your name to login";
+			return false;
         }
         else {
             alert("Welcome : " + uname.value);
@@ -20,11 +22,13 @@
     }
 </script>
 <body>
-    <form>
-        User name* : <input type="text" id="username" name="username" onblur="validate()">
+    <form action="success.html" onsubmit="return validate()">
+        User name* : <input type="text" id="username" name="username" >
+		<span id="errusername"></span>
         <div>First Name* : <input type="text" name="firstname" id="firstname"></div>
         <div>Last Name* : <input type="text" name="lastname" id="lastname"></div>
-        <div>Full Name <input type="text" name="fullname" id="fullname" onfocus="sayHello()"></div>
+		
+		<input type="submit">
     </form>
 </body>
 </html>

@@ -653,6 +653,63 @@ Use case : validate form
 
 
 
+Dynamic Content
+==================
+
+
+
+
+innerText and innerHTML are used to display messages/error messages on the screen
+
+
+
+Problem Statement :In banking app, we need to create an EMI calculator
+
+Principal	:	[7800000	]
+Tenure	:	[60	]
+Interest Rate:	[10	]
+
+Calculator EMI	 - Button
+
+Case 1:
+<Display in red color>
+Principal cannot be empty
+Tenure cannot be empty
+Interest rate cannot be empty
+
+
+Case 2:
+<Display in green color>
+Your Month EMI is : 76541
+
+
+Hands on :
+
+
+
+
+
+Cookies
+============
+
+
+Web Server
+
+Tomcat
+
+
+
+
+
+Web Worker
+============
+
+
+Back ground processing 
+
+
+
+
 
 
 

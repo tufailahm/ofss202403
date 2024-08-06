@@ -1,0 +1,42 @@
+<HTML>
+
+<HEAD>
+      <TITLE>Credit Card Registration Form</TITLE>
+      <script type="text/javascript" src="validate.js">
+      </script>
+</HEAD>
+
+<BODY>
+
+      <form name="f1">
+            <center>
+                  <h2>Online Credit Card Application Form</h2>
+            </center>
+
+            <label>State:*</label>
+
+            <select id="state" onchange="mydisp();">
+			                  <option>----select-----</option>
+                  <option>AndhraPradesh</option>
+                  <option>TamilNadu</option>
+                  <option>Karnataka</option>
+                  <option>Maharashtra</option>
+                  <option>Kashmir</option>
+                  <option>Kerala</option>
+                  <option>Telangana</option>
+                  <option>Odisha</option>
+                  <option>UttarPradesh</option>
+                  <option>MadhyaPradesh</option>
+
+            </select>
+
+            <br /><br />
+            <label>City:* </label>
+            <select style="display:none;" id='cities'>
+
+            </select>
+
+      </form>
+</BODY>
+
+</HTML>

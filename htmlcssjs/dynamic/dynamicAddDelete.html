@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function removeDataFromDropDown(inp1, sel1) {
+            len1 = sel1.options.length;
+            for (i = 0; i < len1; i++) {
+                if (sel1.options[i].value == inp1.value) {
+                    sel1.options[i] = null;
+                    break;
+                }
+            }
+        }
+        function addSelOpt(inp1, sel1) {
+            len1 = sel1.options.length;
+            option0 = new Option(inp1.value, inp1.value);
+            sel1.options[len1] = option0;
+        }  
+		function sayHello(a,b,c){
+			console.log("ADD : "+  a.value)
+			console.log("SAY HELLO :"+b.value)
+			console.log("DELETE :"+c.value)
+
+		}
+		
+		function display(inp,inp2)
+		{
+			len = inp.length;
+			option = new Option(inp2.value,inp2.value);
+			inp[length] = option;
+		}
+    </script>
+</head>
+
+<body>
+<form name="singhform">
+	Say Hello 1 : <input type=text name="msg"><br/>
+</form>
+    <form>
+	Say Hello 2 : <input type=text name="msg" onblur="sayHello(this.form.add,this,this.form.delete)"><br/>
+        Enter what to del:
+        <input type=text  name="delete" onblur="removeDataFromDropDown(this,this.form.selectList)">
+        <br>
+        enter what to enter:
+        <input type=text  name="add" onblur="addSelOpt(this,this.form.selectList)">
+        <br>
+        <select id="selectList" name="selectList" onchange="display(this,singhform.msg)">
+            <option value="--">--</option>
+            <option value="one" selected="selected">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </form>
+</body>
+
+</html> 

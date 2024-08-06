@@ -1,0 +1,43 @@
+<html >
+<head>
+    <script  type="text/javascript">
+        function add() {
+           
+            var mainDiv = document.getElementById('myDiv1'); 
+
+            var newDiv = document.createElement('form');
+            newDiv.setAttribute('id', 'message');
+            
+            newDiv.setAttribute('action', 'onlineapplication.html');
+            newDiv.setAttribute('method', 'get');
+
+            mainDiv.appendChild(newDiv);
+
+            var newSpan = document.createElement('span');
+           newSpan.setAttribute('id','mySpan');
+            newSpan.innerHTML = "User Name : "; // create new textbox for email entry 
+            var newTextBox = document.createElement('input');
+            newTextBox.type = 'text';
+            newTextBox.setAttribute('id', 'username' );
+
+
+            var submitButton = document.createElement("input");
+            submitButton.setAttribute('value','Login')
+            submitButton.setAttribute('type','submit') 
+
+            newDiv.appendChild(newSpan);
+            newDiv.appendChild(newTextBox);
+            newDiv.appendChild(submitButton);
+
+            mainDiv.appendChild(newDiv);
+        } 
+    </script>
+</head>
+
+<body>
+    <div id="myDiv1">
+        <input id="Button1" type="button" value="Add A text Box" onclick="add()" />
+    </div>
+</body>
+
+</html>
