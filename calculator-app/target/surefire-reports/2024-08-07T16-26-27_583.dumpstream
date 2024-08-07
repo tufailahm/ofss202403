@@ -1,0 +1,5 @@
+# Created at 2024-08-07T16:26:27.972
+Boot Manifest-JAR contains absolute paths in classpath 'E:\Trainings\2024\7.OFSS\ofss202403\calculator-app\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

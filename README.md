@@ -719,6 +719,261 @@ Child 2 name	[	]
 
 
 
+Testing
+============
+
+expectation
+
+actual
+
+-----------load testing
+
+What are tests?
+Why tests are needed ?
+
+$1
+
+Unit Testing
+
+Integration Testing
+
+White vs Black testing
+
+Performance testing
+
+
+------------------------------------------
+What are software tests?
+Why are software tests helpful?
+Testing frameworks for Java
+
+
+junit		- testing framework for java
+selenium
+TestNG
+
+
+
+
+Junit 5  - jupiter	
+
+Junit 4 
+archetype : quickstart
+group id : com.training
+artifact id : calculator-app
+
+
+
+@Test annotation 
+=============
+
+The Test annotation tells JUnit that the public void method to which it is attached can be run as a test case. To run the method, JUnit first constructs a fresh instance of the class then invokes the annotated method. Any exceptions thrown by the test will be reported by JUnit as a failure.
+
+
+
+@DisplayName
+
+
+How to Order the tests and why we will order the tests
+====================================
+
+
+CRUD
+
+@Order(1)
+boolean addVisitor(Visitor 18171 neha, meeting , 91817112)	- assertTrue(true)
+getVisitor(18171)
+updateVisitor(18171, trainee)
+getAllVisitors (size==0) -- fail
+deleteVisitor (18171)
+
+
+@Test		//annotation to mark the test
+
+@DisplayName("6. Testing whole and negative number 30 and -10")
+	//@Disabled
+
+@Order(value = myOrder+1)
+
+
+
+-------------
+
+Hands on : 15 minutes
+
+Create a method to return welcome message based on Time and write three test cases to test proper message.
+
+
+9-12 - Good Morning folks!!
+12-3 - Good afternoon Guys!!
+3-5 - Good Evening buddies!!
+
+
+
+
+Write three test cases to test each and use @Display name to indicate the test
+
+Order of the test should be fist
+
+3-5 test followed by 9-12 test and 12-3 test
+
+
+
+
+
+
+=============================================================
+
+
+Why we need setup and teardown methods in junit ?
+
+=============================================================
+
+
+Coding Convention for JUnit Class
+
+Name of the test class must end with "Test".
+Name of the method must begin with "test".
+Return type of a test method must be void.
+Test method must not have any parameter.
+Test method must not throw any exception.
+
+
+
+=============================================================
+
+
+Testing Exceptions
+
+@Test
+    @DisplayName("Testing convert to numbers \"20\" ")
+    @Order(12)
+    public void testConvertNumbers1(){
+        System.out.println("testConvertNumbers1 called");
+        int actual =   calc.convertToNumber("20");
+        assertEquals(expected,actual);
+    }
+
+    //Handle exception in junit
+    @Test
+    @DisplayName("Testing convert to numbers \"Twenty\" ")
+    @Order(13)
+    public void testConvertNumbers2(){
+        System.out.println("testConvertNumbers2 called");
+        assertThrows(NumberFormatException.class, () -> {
+            int actual =   calc.convertToNumber("Twenty");
+            assertEquals(expected,actual);
+        });
+    }
+
+
+
+Hands on
+===========
+
+
+1) Create two test cases to check the divide method.
+
+public int divide(int num1, int num2)
+{
+	return num1/num2;
+}
+
+calc.divide(40,2);
+calc.divide(40,0);		-	ArithmeticException
+
+
+
+2. Code to Test palindrome :
+
+package com.training;
+
+class InvalidWordException extends RuntimeException {
+
+	public InvalidWordException() {
+
+	}
+
+	public InvalidWordException(String message, Throwable cause, boolean enableSuppression,
+			boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public InvalidWordException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public InvalidWordException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public InvalidWordException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+
+}
+
+public class Palindrome {
+
+	public boolean checkPalindrome(String word) {
+		String reverse = "";
+
+		if (word.equalsIgnoreCase("ofss") || word.equalsIgnoreCase("oracle")) {
+			throw new InvalidWordException();
+		} else {
+			int length = word.length();
+			for (int i = length - 1; i >= 0; i--)
+				reverse = reverse + word.charAt(i);
+			if (word.equals(reverse))
+				return true;
+			else
+				return false;
+		}
+	}
+}
+
+
+
+Create following test cases to check palindrome for following words
+
+
+order -4							
+malayalam	- test it should be palindrome				
+
+order -1
+ofss	- test it should throw InvalidWordException		
+
+order -3
+neha	- test it should not be palindrome
+
+order -2
+oracle	- test it should throw InvalidWordException
+
+
+Use @DisplayName to print appropriate display name.
+
+
+
+
+
+@RepeatedTest
+@RepeatedTest(value = 5, name = "{displayName} - repetition {currentRepetition} of {totalRepetitions}")
+
+RepeatedTest.LONG_DISPLAY_NAME – {displayName} :: repetition {currentRepetition} of {totalRepetitions}
+RepeatedTest.SHORT_DISPLAY_NAME – repetition {currentRepetition} of {totalRepetitions}
+
+
+Assert that execution of the supplied executablecompletes before the given timeout is exceeded.
+
+
+
+
+
+
 
 
 
