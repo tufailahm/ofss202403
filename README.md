@@ -989,3 +989,176 @@ Assert that execution of the supplied executablecompletes before the given timeo
 
 
 
+API Testing using POSTMAN
+===================
+
+Amazon	app					DTDC app
+					
+		
+	REST					https://dtdctracking/shipmentid/281239123123
+
+	JSON
+
+
+-------------------------
+
+	ola					google maps
+
+
+-------------------------
+
+	bookmyshow
+
+
+POSTMAN
+
+
+
+
+
+
+
+http://localhost:9090/visitor
+
+
+
+Query parameter
+===============
+
+
+http://localhost:9090/visitor?visitorName=Tarun
+
+
+http://localhost:9090/visitor?visitorName=Tarun&age=6&contact=9182
+
+
+
+
+Hands on : Create another parameter (optional) to search based on mobileNumber
+
+http://localhost:9090/visitor?visitorName=Tarun&mobileNumber=19182727
+
+400 - status bad request
+500 - Internal server
+
+
+204 - No Content
+[	]
+
+
+200 - Ok
+
+--------------------------------------------Parameters in the URL
+http://localhost:9090/visitor/:id
+https://api.twitter.com/2/users/:tweetid/tweets
+
+
+POST - save/create
+BODY in postman
+
+
+
+https://fakerestapi.azurewebsites.net/api/v1/Authors
+
+
+
+
+Hands On :
+
+1) Create a rest endpoint to update visitor information like below :
+
+http://localhost:9090/visitor/:visitorId		- PUT 
+
+a) It should take visitor object to update
+b) The visitor id passed in the url should be used to update the record and not the id passed as a JSON object
+c) If the visitor id does not exists , send 204 status code
+d) If the visitor id exists, then it should update visitorName,purpose and mobileNumber of that particular id and send status code of 200 alongwith all the all the visitors. (You can verify whether it got updated or not )
+
+
+2) Test the above REST API in postman and update one record.
+
+3) Verify the results
+
+
+
+
+ Hands on :
+
+
+
+http://localhost:9090/visitor/:visitorId		- DELETE
+
+
+
+Verify delete  :
+
+POSTMAN
+
+
+Appropriate status codes must be sent as response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Understanding the need for response codes in REST API testing
+======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
