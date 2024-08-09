@@ -1096,27 +1096,7 @@ POSTMAN
 
 
 Appropriate status codes must be sent as response
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+================================
 
 
 Understanding the need for response codes in REST API testing
@@ -1128,6 +1108,59 @@ Understanding the need for response codes in REST API testing
 
 
 
+Selenium
+===================
+
+automation testing
+
+
+Use case : Login functionality of saucedemo.com
+
+
+Maven - depedendency
+JUnit
+
+
+
+
+//*[@id="user-name"]
+
+/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input
+
+
+
+
+https://www.selenium.dev/documentation/webdriver/elements/locators/
+
+
+
+
+
+
+
+
+11:45
+
+
+
+Cucumber Testing
+====================
+
+BDD
+
+TDD
+QA Team
+
+Feature: login validation
+
+	Scenario: 
+	When user navigates the login page
+	Then user enter username and password
+	Then he clicks on login button
+	Then he should be navigated to home page
+	
+
+Cucumber
 
 
 
@@ -1147,10 +1180,7 @@ Understanding the need for response codes in REST API testing
 
 
 
-
-
-
-
+ 
 
 
 
