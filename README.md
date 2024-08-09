@@ -1162,7 +1162,7 @@ Feature: login validation
 
 Cucumber
 
-
+Page Object Model & Page Factory
 
 
 
